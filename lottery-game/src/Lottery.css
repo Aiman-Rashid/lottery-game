@@ -1,0 +1,158 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px; /* Add padding to the body for overall margin */
+    color: white; /* Set default text color to white for better contrast */
+    position: relative; /* Position relative for the pseudo-element */
+    overflow: hidden; /* Prevent overflow */
+}
+
+body::before {
+    content: ""; /* Required for pseudo-element */
+    position: absolute; /* Position it absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Stretch to the right */
+    bottom: 0; /* Stretch to the bottom */
+    background: linear-gradient(to bottom right, #4CAF50, #2E8B57), url('/images/lottery-background.jpg'); /* Background with gradient and image */
+    background-size: cover; /* Cover the entire body */
+    background-repeat: no-repeat; /* Prevent repeating the background image */
+    opacity: 0.5; /* Set the desired opacity (0.0 to 1.0) */
+    z-index: -1; /* Place it behind other content */
+}
+
+/* Lottery Header */
+h1 {
+    text-align: center;
+    color: #fff; /* White text color for the heading */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Ticket Container */
+.ticket-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow tickets to wrap onto new rows */
+    justify-content: center;
+    gap: 15px; /* Add spacing between tickets */
+    margin: 20px auto;
+    max-width: 90%;
+  
+}
+
+/* Ticket Card */
+.ticket {
+    background-color: #fff; /* White background for tickets */
+    border: 2px solid #4CAF50; /* Green border for tickets */
+    border-radius: 15px; /* Rounded corners */
+    padding: 15px;
+    width: 120px; /* Fixed width for consistency */
+    height: 150px; /* Fixed height for consistency */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.ticket:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+/* Winning Ticket Highlight */
+.ticket.winner {
+    background-color: #d4edda; /* Light green background for winners */
+    border-color: #28a745; /* Darker green border for winners */
+    box-shadow: 0 0 15px #28a745; /* Green glow for winners */
+}
+
+/* Ticket Number Styles */
+.ticket-number {
+    font-size: 36px; /* Larger font size for ticket numbers */
+    font-weight: bold; /* Bold text */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the numbers */
+    margin-top: 10px; /* Space above the numbers */
+}
+
+.ticket-number span {
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+    border-radius: 5px; /* Rounded corners for number background */
+    padding: 10px 15px; /* Padding around the numbers */
+    margin: 0 5px; /* Space between numbers */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for numbers */
+}
+
+/* Winning Message */
+h3 {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 10px;
+    color: #d9534f; /* Red color for win message */
+}
+
+h3.winner-message {
+    color: #28a745; /* Green for "Winner" message */
+    font-size: 1.2rem;
+}
+
+/* Button Styles */
+button {
+    display: block; /* Center the button */
+    margin: 20px auto; /* Center button with margin */
+    padding: 10px 20px; /* Padding for button */
+    font-size: 16px; /* Font size for button */
+    color: #fff; /* White text color */
+    background-color: #4CAF50; /* Green background */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Reset Button Style */
+button.reset {
+    background-color: #f44336; /* Red background for reset */
+}
+
+button.reset:hover {
+    background-color: #e53935; /* Darker red on hover */
+}
+
+.container {
+    margin-top: 20px; /* Add top margin to the container */
+}
+
+.ticket-card {
+    background-color: rgba(46, 139, 87, 0.9); /* Semi-transparent sea green color */
+    color: white; /* White text color for contrast */
+    border: 2px solid #1c5e3a; /* Darker green border for the ticket card */
+    border-radius: 10px; /* Rounded corners for the border */
+    padding: 20px; /* Padding inside the card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover effect */
+}
+
+.ticket-card:hover {
+    transform: scale(1.05); /* Slightly enlarge ticket on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Darker shadow on hover */
+}
+
+.card {
+    border: none; /* Remove default Bootstrap card border */
+}
+
+.single-ticket{
+    border: 4px solid green;
+    padding: 2px 4px;
+    margin:2px;
+   box-shadow:0 8px 16px rgba(0, 0, 0, 0.3) ;
+}
