@@ -1,0 +1,22 @@
+Lottery Game App 🎟️
+
+A fun and interactive lottery game built using React.js! This app generates random lottery tickets, 
+checks if you're a winner, and lets you add as many new tickets as you like. Simple, responsive, and great for 
+exploring basic React concepts!
+
+Features ✨
+
+🎲 Random Lottery Numbers: Generates random numbers for each ticket.
+
+🎉 Winner Validation: Compares the sum of ticket numbers to the winning sum and declares if you're a winner.
+
+🖼️ Responsive Design: Beautiful, interactive UI with modern CSS.
+
+➕ Add Tickets: Generate and display unlimited new tickets with just a button click.
+
+⚡ Built with React.js: Utilizes React hooks like useState for dynamic state management.
+
+ ## Installation
+   1. Clone the repository
+   2. Run `npm install` to install dependencies
+   3. Run `npm start` to start the application
